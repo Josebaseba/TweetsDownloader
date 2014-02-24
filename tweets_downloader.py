@@ -10,7 +10,7 @@ access_secret   = ""
 
 def downloadTweets(screen_name):
 
-	print "Starting download..."
+	print "Start tweets download..."
 
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_key, access_secret)
@@ -30,8 +30,8 @@ def downloadTweets(screen_name):
 	out_tweets = [tweet.text.encode("utf-8") for tweet in all_tweets]
 	parsed_tweets = dict(zip(range(len(out_tweets) + 1), out_tweets))
 
-	with open("%s_tweets.json" % screen_name, "w") as f:
-		json.dump(parsed_tweets, f, ensure_ascii = False)
+	with open("%s_tweets.json" % screen_name, "w") as file:
+		json.dump(parsed_tweets, file, ensure_ascii = False)
 	pass
 
 if __name__ == "__main__":
