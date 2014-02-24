@@ -3,12 +3,10 @@ import json
 
 ACCOUNT_NAME    = "josebaseba"
 
-#Twitter API
 consumer_key    = ""
 consumer_secret = ""
 access_key      = ""
 access_secret   = ""
-
 
 def downloadTweets(screen_name):
 
