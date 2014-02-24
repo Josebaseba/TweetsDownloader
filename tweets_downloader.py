@@ -3,10 +3,12 @@ import json
 
 ACCOUNT_NAME    = "josebaseba"
 
+#Twitter API
 consumer_key    = ""
 consumer_secret = ""
 access_key      = ""
 access_secret   = ""
+
 
 def downloadTweets(screen_name):
 
@@ -31,8 +33,9 @@ def downloadTweets(screen_name):
 	parsed_tweets = dict(zip(range(len(out_tweets) + 1), out_tweets))
 
 	with open("%s_tweets.json" % screen_name, "w") as f:
-		json.dump(parsed_tweets, f)
+		json.dump(parsed_tweets, f, ensure_ascii = False)
 	pass
 
 if __name__ == "__main__":
 	downloadTweets(ACCOUNT_NAME)
+
