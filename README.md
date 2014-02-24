@@ -11,7 +11,7 @@ Download the script and change the ACCOUNT_NAME variable name. For example:
 
   	ACCOUNT_NAME = "josebaseba"
 
-Remember that you have to create an twitter developer application to get the necessary keys, here the link:
+Remember that you have to create a twitter developer application to get the necessary keys, here the link:
 
   	https://apps.twitter.com/
   
