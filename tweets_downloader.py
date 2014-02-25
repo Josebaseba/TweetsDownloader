@@ -28,7 +28,7 @@ def downloadTweets(screen_name):
 		print "%s tweets downloaded..." % (len(all_tweets))
 
 	out_tweets = [tweet.text.encode("utf-8") for tweet in all_tweets]
-	parsed_tweets = dict(zip(range(len(out_tweets) + 1), out_tweets))
+	parsed_tweets = dict(zip(range(len(out_tweets)), out_tweets))
 
 	with open("%s_tweets.json" % screen_name, "w") as file:
 		json.dump(parsed_tweets, file, ensure_ascii = False)
